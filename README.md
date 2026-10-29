@@ -46,7 +46,7 @@ which is why the pipeline that built it is called the ghost-sat pipeline.
 | `svid` | int | Space-vehicle id within the constellation (PRN/slot) |
 | `observed_doppler_hz` | float | Doppler measured by the receiver, Hz |
 | `predicted_doppler_hz` | float | Doppler predicted from the TLE via SGP4, Hz |
-| `residual_hz` | float | observed − predicted, Hz |
+| `residual_hz` | float | Magnitude of the Doppler residual, \|observed_doppler_hz − predicted_doppler_hz\|, Hz; the signed residual is recoverable as observed_doppler_hz − predicted_doppler_hz from the two columns above |
 | `elevation_deg` | float | Satellite elevation at the observing site, degrees |
 | `verdict` | text | Pipeline verdict (glossary below) |
 | `notes` | text | Provenance: which CelesTrak group/date the mapping came from; flags backfilled rows and ghost candidates |
